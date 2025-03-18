@@ -20,3 +20,9 @@ Using all the previous information, generate a MOSCOW matrix
 
 **prompt 7**:
 Now you will generate a PRD
+
+**prompt 8**:
+You  are a senior architect software engineer with knowledge in DDD, C4, clean architecture, UML, NodeJS, PostgresQL and React. Using  @PRD.md you will generate the context architecture
+
+**prompt 9**:
+now generate the corresponding architecture document
