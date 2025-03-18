@@ -1,0 +1,78 @@
+graph TD
+    subgraph "UI Layer"
+        UI1[React Web Application]
+        UI2[Mobile-Responsive Views]
+        UI3[Admin Portal]
+    end
+    
+    subgraph "API Layer"
+        API1[RESTful API Controllers]
+        API2[GraphQL API]
+        API3[Webhook Handlers]
+    end
+    
+    subgraph "Application Layer"
+        App1[Use Cases / Services]
+        App2[DTOs]
+        App3[Validators]
+        App4[Command/Query Handlers]
+    end
+    
+    subgraph "Domain Layer"
+        Dom1[Entities]
+        Dom2[Value Objects]
+        Dom3[Domain Events]
+        Dom4[Aggregates]
+        Dom5[Domain Services]
+        Dom6[Repositories Interfaces]
+    end
+    
+    subgraph "Infrastructure Layer"
+        Infra1[Repository Implementations]
+        Infra2[Database Context]
+        Infra3[External Service Adapters]
+        Infra4[Message Brokers]
+        Infra5[Caching]
+        Infra6[Logging]
+    end
+    
+    UI1 --> API1
+    UI1 --> API2
+    UI2 --> API1
+    UI2 --> API2
+    UI3 --> API1
+    
+    API1 --> App1
+    API2 --> App1
+    API3 --> App1
+    
+    App1 --> App4
+    App4 --> Dom1
+    App4 --> Dom5
+    App4 --> Dom6
+    
+    Dom6 --> Infra1
+    Infra1 --> Infra2
+    
+    style UI1 fill:#61dafb,stroke:#4fa8c7,color:#000000
+    style UI2 fill:#61dafb,stroke:#4fa8c7,color:#000000
+    style UI3 fill:#61dafb,stroke:#4fa8c7,color:#000000
+    style API1 fill:#68a063,stroke:#4c7249,color:#ffffff
+    style API2 fill:#68a063,stroke:#4c7249,color:#ffffff
+    style API3 fill:#68a063,stroke:#4c7249,color:#ffffff
+    style App1 fill:#f0db4f,stroke:#c1b040,color:#000000
+    style App2 fill:#f0db4f,stroke:#c1b040,color:#000000
+    style App3 fill:#f0db4f,stroke:#c1b040,color:#000000
+    style App4 fill:#f0db4f,stroke:#c1b040,color:#000000
+    style Dom1 fill:#336791,stroke:#264d6b,color:#ffffff
+    style Dom2 fill:#336791,stroke:#264d6b,color:#ffffff
+    style Dom3 fill:#336791,stroke:#264d6b,color:#ffffff
+    style Dom4 fill:#336791,stroke:#264d6b,color:#ffffff
+    style Dom5 fill:#336791,stroke:#264d6b,color:#ffffff
+    style Dom6 fill:#336791,stroke:#264d6b,color:#ffffff
+    style Infra1 fill:#777777,stroke:#555555,color:#ffffff
+    style Infra2 fill:#777777,stroke:#555555,color:#ffffff
+    style Infra3 fill:#777777,stroke:#555555,color:#ffffff
+    style Infra4 fill:#777777,stroke:#555555,color:#ffffff
+    style Infra5 fill:#777777,stroke:#555555,color:#ffffff
+    style Infra6 fill:#777777,stroke:#555555,color:#ffffff

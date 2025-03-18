@@ -1,0 +1,78 @@
+graph TD
+    subgraph "Frontend"
+        F1[React SPA]
+        F2[Redux State Management]
+        F3[Styled Components]
+        F4[React Query]
+        F5[Jest Testing]
+    end
+    
+    subgraph "Backend API"
+        B1[Node.js]
+        B2[Express/NestJS]
+        B3[TypeScript]
+        B4[GraphQL]
+        B5[REST API]
+        B6[Jest Testing]
+    end
+    
+    subgraph "Data Layer"
+        D1[PostgreSQL]
+        D2[TypeORM/Prisma]
+        D3[Redis Cache]
+        D4[Elasticsearch]
+    end
+    
+    subgraph "AI & Analytics"
+        A1[ML Models]
+        A2[TensorFlow.js]
+        A3[Analytics Pipeline]
+    end
+    
+    subgraph "Integration"
+        I1[API Gateway]
+        I2[Message Queue RabbitMQ]
+        I3[Integration Adapters]
+    end
+    
+    subgraph "DevOps"
+        O1[Docker]
+        O2[Kubernetes]
+        O3[CI/CD Pipeline]
+        O4[Monitoring ELK]
+    end
+    
+    F1 --> B4
+    F1 --> B5
+    
+    B1 --> D2
+    B1 --> I1
+    B1 --> A1
+    
+    D2 --> D1
+    
+    style F1 fill:#61dafb,stroke:#4fa8c7,color:#000000
+    style F2 fill:#764abc,stroke:#5a3990,color:#ffffff
+    style F3 fill:#db7093,stroke:#b75c7b,color:#ffffff
+    style F4 fill:#ff4154,stroke:#cc343f,color:#ffffff
+    style F5 fill:#99425b,stroke:#773244,color:#ffffff
+    style B1 fill:#68a063,stroke:#4c7249,color:#ffffff
+    style B2 fill:#ea2845,stroke:#c12035,color:#ffffff
+    style B3 fill:#007acc,stroke:#005c99,color:#ffffff
+    style B4 fill:#e535ab,stroke:#b62a85,color:#ffffff
+    style B5 fill:#0096ff,stroke:#0066cc,color:#ffffff
+    style B6 fill:#99425b,stroke:#773244,color:#ffffff
+    style D1 fill:#336791,stroke:#264d6b,color:#ffffff
+    style D2 fill:#5a67d8,stroke:#4552ad,color:#ffffff
+    style D3 fill:#dc382d,stroke:#b22922,color:#ffffff
+    style D4 fill:#5bb951,stroke:#458642,color:#ffffff
+    style A1 fill:#ff6f00,stroke:#cc5900,color:#000000
+    style A2 fill:#ff6f00,stroke:#cc5900,color:#000000
+    style A3 fill:#ff6f00,stroke:#cc5900,color:#000000
+    style I1 fill:#7b1fa2,stroke:#5e177d,color:#ffffff
+    style I2 fill:#ff6600,stroke:#cc5500,color:#000000
+    style I3 fill:#7b1fa2,stroke:#5e177d,color:#ffffff
+    style O1 fill:#0db7ed,stroke:#0a85ae,color:#000000
+    style O2 fill:#326ce5,stroke:#285bbd,color:#ffffff
+    style O3 fill:#41cd52,stroke:#35a644,color:#000000
+    style O4 fill:#00bfb3,stroke:#009a91,color:#000000

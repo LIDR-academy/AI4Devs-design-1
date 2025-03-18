@@ -1,0 +1,94 @@
+classDiagram
+    class JobRequisition {
+        +requisitionId: UUID
+        +title: String
+        +description: String
+        +requirements: String[]
+        +department: String
+        +status: RequisitionStatus
+        +createdBy: UUID
+        +approvedBy: UUID
+        +createdAt: DateTime
+        +updatedAt: DateTime
+        +createJobPosting()
+        +approve()
+        +reject()
+        +close()
+    }
+    
+    class Candidate {
+        +candidateId: UUID
+        +firstName: String
+        +lastName: String
+        +email: String
+        +phone: String
+        +resumeUrl: String
+        +status: CandidateStatus
+        +source: String
+        +createdAt: DateTime
+        +updatedAt: DateTime
+        +addToTalentPool()
+        +updateStatus()
+        +addNote()
+        +scheduleInterview()
+    }
+    
+    class Application {
+        +applicationId: UUID
+        +candidateId: UUID
+        +jobPostingId: UUID
+        +status: ApplicationStatus
+        +submittedAt: DateTime
+        +updatedAt: DateTime
+        +matchScore: Number
+        +advance()
+        +reject()
+        +hold()
+        +assignReviewer()
+    }
+    
+    class Interview {
+        +interviewId: UUID
+        +applicationId: UUID
+        +interviewers: UUID[]
+        +scheduledTime: DateTime
+        +duration: Number
+        +type: InterviewType
+        +status: InterviewStatus
+        +location: String
+        +schedule()
+        +reschedule()
+        +cancel()
+        +complete()
+    }
+    
+    class Feedback {
+        +feedbackId: UUID
+        +interviewId: UUID
+        +providedBy: UUID
+        +submittedAt: DateTime
+        +questions: Question[]
+        +overallRating: Number
+        +recommendation: RecommendationType
+        +notes: String
+        +submit()
+        +update()
+    }
+    
+    class ComplianceRecord {
+        +recordId: UUID
+        +entityType: String
+        +entityId: UUID
+        +regulationType: String
+        +data: Object
+        +createdAt: DateTime
+        +updatedAt: DateTime
+        +validateCompliance()
+        +generateReport()
+    }
+    
+    JobRequisition "1" --> "*" Application
+    Candidate "1" --> "*" Application
+    Application "1" --> "*" Interview
+    Interview "1" --> "*" Feedback
+    Application "1" --> "*" ComplianceRecord
