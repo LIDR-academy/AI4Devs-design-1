@@ -1,0 +1,29 @@
+graph TD
+    Recruitment --> |Customer-Supplier| Matching
+    Recruitment --> |Partnership| Collaboration
+    Recruitment --> |Conformist| Compliance
+    Recruitment --> |Customer-Supplier| Candidate
+    
+    Matching --> |Customer-Supplier| Collaboration
+    Matching --> |Conformist| Compliance
+    
+    Collaboration --> |Conformist| Compliance
+    
+    Candidate --> |Conformist| Compliance
+    
+    Integration --> |Anti-corruption Layer| ExternalSystems[External Systems]
+    
+    Analytics --> |Open-Host Service| Recruitment
+    Analytics --> |Open-Host Service| Matching
+    Analytics --> |Open-Host Service| Collaboration
+    Analytics --> |Open-Host Service| Compliance
+    Analytics --> |Open-Host Service| Candidate
+    
+    style Recruitment fill:#17a2b8,stroke:#117a8b,color:#ffffff
+    style Matching fill:#6f42c1,stroke:#553098,color:#ffffff
+    style Collaboration fill:#fd7e14,stroke:#c96a11,color:#000000
+    style Compliance fill:#dc3545,stroke:#bd2130,color:#ffffff
+    style Candidate fill:#20c997,stroke:#199d76,color:#000000
+    style Integration fill:#6c757d,stroke:#565e64,color:#ffffff
+    style Analytics fill:#007bff,stroke:#0069d9,color:#ffffff
+    style ExternalSystems fill:#999999,stroke:#6b6b6b,color:#ffffff
