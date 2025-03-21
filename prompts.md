@@ -10,7 +10,7 @@ What are the 5 well known existing ATS on the market?
 You will create a SWOT analysis for these five products. The expected output is a matrix
 
 **prompt 4**:
-Based on this SWOT analysis, find 5 killer fateures to would distinguish me from them
+Based on this SWOT analysis, find 5 killer features to would distinguish me from them
 
 **prompt 5**:
 Now you will generate a Lean canvas matrix
