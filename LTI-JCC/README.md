@@ -11,11 +11,11 @@ Sistema de Seguimiento de Candidatos (ATS) desarrollado por LTI, diseñado para 
 - [Diagrama de Código](./docs/arquitectura/codigo.md)
 
 ### Negocio
-- [Beneficios del Sistema](./docs/beneficios.md)
-- [Ventajas Competitivas](./docs/ventajas_competitivas.md)
-- [Lean Canvas](./docs/lean_canvas.md)
-- [Casos de Uso](./docs/casos_uso.md)
-- [Diagramas Técnicos](./docs/diagramas.md)
+- [Beneficios del Sistema](./docs/Negocio/beneficios.md)
+- [Ventajas Competitivas](./docs/Negocio/ventajas_competitivas.md)
+- [Lean Canvas](./docs/Negocio/lean_canvas.md)
+- [Casos de Uso](./docs/Negocio/casos_uso.md)
+- [Diagramas Técnicos](./docs/Negocio/diagramas.md)
 
 ## Tecnologías Principales
 
@@ -102,4 +102,4 @@ LTI - Transformando el reclutamiento con tecnología
 
 ## Licencia
 
-Propietario - LTI © 2024 
+Propietario - LTI © 2025
