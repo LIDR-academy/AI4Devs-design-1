@@ -209,25 +209,3 @@ Genera un diagrama C4 de código que muestre:
 4. Métodos principales
 5. Atributos importantes
 ```
-
-## Notas sobre los Prompts
-
-1. **Estructura**
-   - Los prompts están diseñados para ser claros y específicos
-   - Incluyen todos los elementos necesarios
-   - Mantienen consistencia en la nomenclatura
-
-2. **Mejores Prácticas**
-   - Usar lenguaje claro y conciso
-   - Especificar relaciones y dependencias
-   - Incluir detalles técnicos relevantes
-
-3. **Herramientas**
-   - Mermaid para diagramas de flujo y clases
-   - C4Model para diagramas de arquitectura
-   - PlantUML para casos de uso (opcional)
-
-4. **Mantenimiento**
-   - Actualizar prompts cuando se modifiquen los diagramas
-   - Mantener documentación sincronizada
-   - Revisar consistencia entre diagramas 
